@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import { useMenu } from '@/store/useMenu'
+
+const menu = useMenu()
+menu.setKeys(1)
+menu.setKeys(2)
+menu.setKeys(3)
+
+console.log(menu.getKeys())
 </script>
 
 <template>

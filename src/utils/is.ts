@@ -1,3 +1,3 @@
 export function isString(value: unknown): value is String {
-    return typeof value === 'string'
+  return typeof value === 'string'
 }
