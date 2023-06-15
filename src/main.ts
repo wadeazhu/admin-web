@@ -5,13 +5,10 @@ import App from './App.vue'
 // import { setupRouter } from '@/router'
 // import { setupGlobDirectives } from '@/directive'
 import { setupStore } from '@/store'
-
-
-// createApp(App).
-//   mount('#app')
+import { registerGlobComp } from '@/components/registerGlobComp'
+import 'ant-design-vue/dist/antd.css'
 
 // 设置网页的标题
-// TODO: 这里需要断言querySelector为空
 document.head.querySelector('title')!.innerText = import.meta.env.VITE_APP_TITLE
 
 function initApp() {
@@ -20,8 +17,7 @@ function initApp() {
   setupStore(app)
 
   // 注册全局组件
-  // registerGlobComp(app)
-
+  registerGlobComp(app)
   // 安装router
   // setupRouter(app)
 
