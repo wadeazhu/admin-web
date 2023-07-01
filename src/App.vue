@@ -1,5 +1,3 @@
 <template>
-  <common-form :num="12"></common-form>
+  <router-view></router-view>
 </template>
-
-

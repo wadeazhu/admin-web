@@ -37,10 +37,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        charset: false,
+        additionalData: '@import "@/style/basic.scss";'
         // 注入全局样式
-        additionalData: `
-          @import "./src/style/basic.scss"
-        `
       }
     }
   },
