@@ -1,6 +1,5 @@
 import { createProdMockServer } from 'vite-plugin-mock/dist/client'
 
-
 const modules:Record<string, any> = import.meta.glob('./modules/*.(ts|js)', { eager: true })
 const allApi: any[] = []
 for (const path in modules) {

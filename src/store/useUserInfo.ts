@@ -17,7 +17,7 @@ export const useUserInfo = defineStore('userInfoStore', () => {
     return userInfo.value
   }
 
-  function clearUserInfo(): void {
+  function clear(): void {
     userInfo.value = {}
   }
 
@@ -28,7 +28,7 @@ export const useUserInfo = defineStore('userInfoStore', () => {
 
   return {
     userInfo,
-    setUserInfo,
+    clear,
     getUserInfo,
     clearUserInfo,
     getRole

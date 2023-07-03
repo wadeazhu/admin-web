@@ -30,6 +30,7 @@ import { reactive, ref } from 'vue'
 import { LoginModel } from '@/types/userInfo'
 import { Rule } from 'ant-design-vue/es/form'
 import { FormInstance } from 'ant-design-vue'
+import { apiLogin } from '@/api/modules/login'
 
 const formRef = ref<FormInstance>()
 
@@ -43,7 +44,11 @@ const rules: Record<string, Rule[]> = {
   pwd: [{ required: true, trigger: 'blur', message: '请输入密码' }]
 }
 
-const onFinish = function () {}
+const onFinish = function () {
+  apiLogin(formModel).then((data) => {
+    console.log(data)
+  })
+}
 const onFinishFailed = function () {}
 </script>
 
